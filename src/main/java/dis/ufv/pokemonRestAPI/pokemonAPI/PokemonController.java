@@ -12,5 +12,4 @@ public class PokemonController {
         ArrayList<Pokemon> listaPokemons = null;
         return listaPokemons;
     }
-
 }
