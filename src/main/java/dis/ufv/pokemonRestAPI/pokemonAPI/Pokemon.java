@@ -17,6 +17,7 @@ public class Pokemon {
     private int generation;
     private boolean legendary;
 
+
     public Pokemon(int id, int numero, String name, String tipo1, String tipo2, int total, int hp, int attack, int defense, int speedAttack, int speedDefense, int speed, int generation, boolean legendary) {
         this.id = id;
         this.numero = numero;
