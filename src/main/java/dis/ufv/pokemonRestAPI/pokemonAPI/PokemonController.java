@@ -28,4 +28,16 @@ public class PokemonController {
         }
         return new ResponseEntity<>(encontrado, HttpStatus.OK);
     }
+
+    @GetMapping("/pokemon/porTipo/{tipo}")
+    public ArrayList<Pokemon>  getPortipo(@PathVariable String tipo){
+        ArrayList<Pokemon> listaPokemons = new LectorJson().leeFicheroJson("./src/main/resources/pokemonConId.json");
+        ArrayList<Pokemon> listaEncontrados = new ArrayList<>();
+        for (Pokemon pokemon : listaPokemons) {
+            if (pokemon.getTipo1().equalsIgnoreCase(tipo) || pokemon.getTipo2().equalsIgnoreCase(tipo)) {
+                listaEncontrados.add(pokemon);
+            }
+        }
+        return listaEncontrados;
+    }
 }
