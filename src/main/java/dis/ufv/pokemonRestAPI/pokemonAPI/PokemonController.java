@@ -38,6 +38,7 @@ public class PokemonController {
                 listaEncontrados.add(pokemon);
             }
         }
+
         return listaEncontrados;
     }
 }
